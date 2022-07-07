@@ -1,0 +1,31 @@
+weight = 41.5
+#Ground Shipping
+if weight<=2:
+  cost1 = 20+1.5*weight
+elif weight>2 and weight<=6:
+  cost1 = 20+3*weight
+elif weight>6 and weight<=10:
+  cost1 = 20+4*weight
+elif weight>10:
+  cost1 = 20+4.75*weight
+#Ground Shipping Premium
+cost2=125
+#Drone Shipping
+if weight<=2:
+  cost3 = 4.5*weight
+elif weight>2 and weight<=6:
+  cost3 = 9*weight
+elif weight>6 and weight<=10:
+  cost3 = 12*weight
+elif weight>10:
+  cost3 = 14.25*weight
+#Result
+if cost1<cost2 and cost1<cost3:
+  print('Ground Shipping')
+  print(cost1)
+if cost2<cost1 and cost2<cost3:
+  print('Ground Shipping Premium')
+  print(cost2)
+if cost3<cost2 and cost3<cost1:
+  print('Drone Shipping')
+  print(cost3)
